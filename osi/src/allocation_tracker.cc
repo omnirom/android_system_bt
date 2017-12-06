@@ -120,14 +120,10 @@ void* allocation_tracker_notify_alloc(uint8_t allocator_id, void* ptr,
       allocations[return_ptr] = allocation;
     }
 
-    if (allocation) {
-      allocation->allocator_id = allocator_id;
-      allocation->freed = false;
-      allocation->size = requested_size;
-      allocation->ptr = return_ptr;
-    } else {
-      LOG_ERROR(LOG_TAG, "%s Memory not allocated for allocation." ,__func__);
-    }
+    allocation->allocator_id = allocator_id;
+    allocation->freed = false;
+    allocation->size = requested_size;
+    allocation->ptr = return_ptr;
   }
 
   // Add the canary on both sides
