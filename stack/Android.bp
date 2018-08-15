@@ -182,7 +182,8 @@ cc_library_static {
     required: [
         "libldacBT_enc",
         "libldacBT_abr",
-    ]
+    ],
+    cflags: ["-Wno-macro-redefined"]
 }
 
 // Bluetooth stack unit tests for target

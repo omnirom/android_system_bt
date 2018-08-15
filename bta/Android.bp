@@ -118,6 +118,7 @@ cc_library_static {
     whole_static_libs: [
         "libaudio-hearing-aid-hw-utils",
     ],
+    cflags: ["-Wno-macro-redefined"],
 }
 
 // bta unit tests for target
