@@ -38,6 +38,7 @@ cc_library_static {
         "system/bt/bta/include",
         "system/libhwbinder/include",
     ],
+    cflags: ["-Wno-macro-redefined"],
 }
 
 // HCI unit tests for target
